@@ -44,19 +44,37 @@ const ChatRoom = (props) => {
   const { name, roomName } = props;
   const bottomRef = useRef();
   const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
   const result = useQuery(QUERY_MESSAGES, {
     variables: { roomName },
   });
   const [sendMessage] = useMutation(MUTATION_SEND_MESSAGE);
+  const subscription = useSubscription(SUBSCRIPTION_NEW_MESSAGE, {
+    variables: { roomName },
+  });
 
   useEffect(() => {
     scrollToBottom();
   });
 
+  useEffect(() => {
+    if (!result.loading && result.data) {
+      setMessages(result.data.messages);
+    }
+  }, [result.loading, result.data]);
+
+  useEffect(() => {
+    if (!subscription.loading && subscription.data) {
+      setMessages([...messages, subscription.data.newMessage]);
+    }
+  }, [subscription.loading, subscription.data]);
+
   const onSubmitMessage = (event) => {
     event.preventDefault();
-    sendMessage({ variables: { name, roomName, message } });
-    setMessage('');
+    if (message !== '') {
+      sendMessage({ variables: { name, roomName, message } });
+      setMessage('');
+    }
   };
 
   const scrollToBottom = () => {
@@ -69,7 +87,6 @@ const ChatRoom = (props) => {
   };
 
   const renderMessages = () => {
-    const { messages } = result.data;
     return messages.map((message, i) => (
       <div
         ref={i === messages.length - 1 ? bottomRef : null}

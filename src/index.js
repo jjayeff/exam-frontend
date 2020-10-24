@@ -24,7 +24,7 @@ const wsLink = new WebSocketLink({
   },
 });
 
-const splitLink = split(
+const link = split(
   ({ query }) => {
     const definition = getMainDefinition(query);
     return (
@@ -37,8 +37,7 @@ const splitLink = split(
 );
 
 const client = new ApolloClient({
-  // splitLink,
-  uri: 'http://localhost:4000/graphql',
+  link,
   cache: new InMemoryCache(),
 });
 
