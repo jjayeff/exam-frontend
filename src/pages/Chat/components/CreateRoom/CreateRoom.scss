@@ -1,1 +1,16 @@
 @import '../../../../common/commonConstant.scss';
+
+.create-room {
+  text-align: center;
+  .create-room-header {
+    margin-top: 40px;
+    font-size: 37px;
+    color: #383838;
+  }
+  .create-room-content {
+    margin-top: 20px;
+  }
+  .create-room-footer {
+    margin-top: 40px;
+  }
+}

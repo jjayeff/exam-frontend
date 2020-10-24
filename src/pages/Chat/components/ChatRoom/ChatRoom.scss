@@ -1,1 +1,56 @@
 @import '../../../../common/commonConstant.scss';
+
+.chat-room {
+  padding: 10px 20px;
+  .chat-room-header {
+    font-size: 37px;
+    color: #383838;
+  }
+  .chat-room-content {
+    background-color: #f3f3f3;
+    overflow-y: scroll;
+    height: 73vh;
+    .message-box {
+      padding: 4px 10px;
+      .sender-name {
+        font-size: 12px;
+        color: #6e6e6e;
+      }
+      .message-content {
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #e6e6e6;
+        padding: 5px 10px;
+        margin-left: 7px;
+      }
+      &.right {
+        text-align: right;
+        .message-content {
+          color: #ffffff;
+          background-color: #c41417;
+        }
+      }
+    }
+  }
+  .chat-room-footer {
+    .chat-bar {
+      position: relative;
+      .enter-text-box {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 14px;
+        color: #6e6e6e;
+      }
+      input[type='text'] {
+        width: 100%;
+        height: 60px;
+        color: #4e4e4e;
+        border: 3px solid lightgray;
+        border-radius: 10px;
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+}

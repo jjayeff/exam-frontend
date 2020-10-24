@@ -1,12 +1,13 @@
 import React from 'react';
 import { Sender, Room, CreateRoom, ChatRoom } from './components';
+import './Chat.scss';
 
 class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       step: 'chatRoom',
-      name: 'jeff',
+      name: 'Jeff',
       roomName: 'room1',
     };
   }
@@ -40,7 +41,7 @@ class Chat extends React.Component {
   };
 
   render() {
-    return <section className="chat">{this.renderStep()}</section>;
+    return <section className="app chat">{this.renderStep()}</section>;
   }
 }
 

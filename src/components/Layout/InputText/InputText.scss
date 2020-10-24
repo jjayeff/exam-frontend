@@ -1,0 +1,12 @@
+@import '../../../common/commonConstant.scss';
+
+.input-components {
+  input[type='text'] {
+    height: 60px;
+    color: #4e4e4e;
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    font-size: 34px;
+    text-align: center;
+  }
+}

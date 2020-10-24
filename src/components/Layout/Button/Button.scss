@@ -1,0 +1,32 @@
+@import '../../../common/commonConstant.scss';
+
+.btn {
+  cursor: pointer;
+  padding: 15px 35px;
+  &.primary {
+    font-family: $font-family-prompt;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    &.red {
+      color: #ffffff;
+      background-image: radial-gradient(
+        ellipse farthest-corner at top left,
+        #c41417 0%,
+        #b31315 100%
+      );
+    }
+  }
+  &.text {
+    font-family: $font-family-prompt;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+    &.red {
+      color: #6f6f6f;
+      &:hover {
+        color: #c41417;
+      }
+    }
+  }
+}

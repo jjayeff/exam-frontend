@@ -1,1 +1,16 @@
 @import '../../../../common/commonConstant.scss';
+
+.sender {
+  text-align: center;
+  .sender-header {
+    margin-top: 40px;
+    font-size: 37px;
+    color: #383838;
+  }
+  .sender-content {
+    margin-top: 20px;
+  }
+  .sender-footer {
+    margin-top: 40px;
+  }
+}

@@ -1,6 +1,10 @@
+@import './common/commonConstant.scss';
+
 body {
   margin: 0;
-  font-family: "Prompt", sans-serif;
+  padding: 0;
+  font-family: $font-family-prompt;
+  min-width: 320px;
 }
 
 html,

@@ -1,1 +1,13 @@
 @import '../../../../common/commonConstant.scss';
+
+.room {
+  text-align: center;
+  .room-header {
+    margin-top: 60px;
+    font-size: 37px;
+    color: #383838;
+  }
+  .room-content {
+    margin-top: 100px;
+  }
+}
