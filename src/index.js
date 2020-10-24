@@ -1,9 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./main.scss";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import * as serviceWorker from './serviceWorker';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+  cache: new InMemoryCache(),
+});
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>,
+  document.getElementById('root')
+);
 
 serviceWorker.unregister();

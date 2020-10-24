@@ -1,0 +1,477 @@
+@import '../../common/commonConstant.scss';
+
+.BigcardLogin {
+  background-color: #f9fcea;
+  background-image: url("/img/login/background.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: -60px;
+  background-size: 100%;
+  min-height: 100vh;//calc(100vh - 50px);
+  padding: 0;
+  padding-bottom: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  input:focus,
+  select:focus { 
+    outline: none !important;
+  }
+  .bigcard-login {
+    border-radius: 0 0 400px 0;
+    .language {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row-reverse;
+      font-family: DBHeavent;
+      font-size: 20px;
+      line-height: 24px;
+      color: #BDBDBD;
+      padding: 15px 35px 0 0;
+      text-align: center;
+      p {
+        margin: 0;
+      }
+      div {
+        padding: 0 10px;
+        background: #F2F2F2;
+        border: 1px solid #A1B548;
+        box-sizing: border-box;
+        box-shadow: 0px 5px 10px rgba(142, 165, 23, 0.4);
+      }
+      .en {
+        border-radius: 0px 3px 3px 0px;
+      }
+      .th {
+        border-radius: 3px 0px 0px 3px;
+      }
+      .en.select,
+      .th.select {
+        background: #A1B548;
+        box-shadow: 0px 5px 10px rgba(142, 165, 23, 0.4);
+        color: #FFFFFF;
+      }
+    }
+    .login {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .header {
+        .header-top {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          .header-logo {
+            width: 100%;
+          }
+          .connect {
+            margin-left: 6.5px;
+            width: 158.26;
+            height: 26.39px;
+          }
+        }
+        .header-text {
+          margin-top: 10px;
+          font-family: DBHeaventMed;
+          font-size: 23px;
+          line-height: 100%;
+          color: #4F4F4F;
+          text-align: center;
+          padding: 0 35px;
+        }
+      }
+      .boxs, .box-error {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .login-form {
+          .form-footer {
+            margin-top: 5px;
+            font-family: DBHeavent;
+            font-size: 14px;
+            line-height: 100%;
+            color: #BDBDBD;
+            text-align: center;
+          }
+        }
+      }
+      .box-error {
+        .login-form {
+          .login-input-box {
+            input[type=tel], input[type=text] { 
+              border: 0.5px solid #E34741 !important;
+            }
+          }
+          .error-text-footer {
+            margin-top: 5px;
+            font-family: DBHeavent;
+            font-size: 14px;
+            line-height: 100%;
+            color: #E34741;
+            text-align: center;
+          }
+        }
+      }
+      .login-form {
+        width: 80%;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 50px rgba(142, 165, 23, 0.2);
+        border-radius: 15px;
+        margin: 10px 25px;
+        padding: 15px 25px 30px 25px;
+        .login-input-box {
+          margin-top: 15px;
+          font-family: DBHeaventBold;
+          font-size: 14px;
+          line-height: 100%;
+          color: #333333;
+          .login-header {
+            display: flex;
+            justify-content: space-between;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            .error-text {
+              font-family: DBHeavent;
+              font-size: 14px;
+              line-height: 100%;
+              color: #EB5757;
+            }
+          }
+          .input-with-icon {
+            position: relative;
+            i {
+              padding: 14px 15px 14px 0;
+              position: absolute;
+              right: 0;
+              color: #C1D14F;
+            }
+          }
+          input[type=text].input-success,
+          input[type=tel].input-success,
+          .select-success {
+            border: 2px solid #C1D14F;
+          }
+          input[type=tel], input[type=text] {
+            width: 100%;
+            border: 0.5px solid #BDBDBD;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding: 8px 13px;
+            font-family: DBHeavent;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+          }
+          input[type=tel]::placeholder, input[type=text]::placeholder {
+            color: #BDBDBD;
+          }
+        }
+        .passport {
+          margin-top: 20px;
+          text-align: center;
+          font-family: DBHeavent;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          span {
+            font-weight: 500;
+            color: #A1B548;
+            text-decoration: underline;
+          }
+        }
+        .error {
+          margin-top: 8px;
+          input[type=tel], input[type=text] {
+            border: none;
+            border: 1px solid #E34741;;
+          }
+          i {
+            color: #E34741;
+          }
+          .error-text {
+            margin-top: 3px;
+            font-family: DBHeavent;
+            font-size: 14px;
+            line-height: 133.4%;
+            color: #E34741;
+          }
+        }
+      }
+    }
+  }
+  .terms-conditions {
+    margin: 0 50px;
+    .terms-conditions-box {
+      margin-top: 15px;
+      .checkbox-container {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-family: DBHeavent;
+        font-size: 16px;
+        line-height: 100%;
+        color: #333333;
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 15px;
+          width: 15px;
+          background-color: #ffffff;
+          border: 1px solid #333333;
+          border-radius: 4px;
+        }
+        input:checked ~ .checkmark {
+          background-color: #C1D14F;
+          border: 1px solid #C1D14F;
+        }
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+        .checkmark:after {
+          left: 5px;
+          top: 1px;
+          width: 4px;
+          height: 9px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        .content {
+          margin-top: 4px;
+          margin-left: 5px;
+          font-family: DBHeavent;
+          font-size: 16px;
+          line-height: 100%;
+          color: #333333;
+          b {
+            font-family: DBHeaventBold;
+          }
+          span {
+            color: #A1B548;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .btn-footer {
+    text-align: center;
+    .btn-primary {
+      margin-top: 20px;
+      width: 80%;
+      height: 50px;
+      background: linear-gradient(253.74deg, #B8D522 9.38%, #CEE267 90.23%);
+      box-shadow: 4px 4px 15px rgba(83, 90, 43, 0.15);
+      border-radius: 40px;
+      border: none;
+      color: #000000;
+      font-family: DBHeaventMed;
+      font-size: 23px;
+      line-height: 100%;
+      color: #333333;
+      text-align: center;
+    }
+    input[type=button]:disabled {
+      opacity: 0.5;
+    }
+    .footer {
+      margin-top: 18px;
+      font-family: DBHeavent;
+      font-size: 20px;
+      line-height: 125%;
+      text-align: center;
+      color: #000000;
+      span {
+        color: #A1B548;
+        text-decoration: underline;
+      }
+    }
+    .error-text {
+      font-family: DBHeavent;
+      font-size: 14px;
+      line-height: 133.4%;
+      color: #E34741;
+      padding: 0 50px;
+    }
+  }
+  .box-error {
+    .modal-page {
+      .modal-content-box {
+        .content {
+          .login-input-box {
+            input[type=tel], input[type=text] {
+              border: 0.5px solid #EB5757;
+            }
+          }
+          .error-text-footer {
+            font-family: DBHeavent;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            color: #EB5757;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    } 
+  }
+  .modal-page {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    .modal-content-box {
+      background: #FFFFFF;
+      border-radius: 15px;
+      margin: auto;
+      width: 80%;
+      .modal-close {
+        position: relative;
+        i {
+          color: #333333;
+          font-size: 25px;
+          position: absolute;
+          right: 17px;
+          top: 17px;
+        }
+      }
+      .content {
+        padding: 50px 0 25px 0;
+        text-align: center;
+        .text-middle {
+          font-family: DBHeaventMed;
+          font-size: 20px;
+          line-height: 100%;
+          color: #333333;
+        }
+        .smell-text {
+          font-family: DBHeavent;
+          font-size: 16px;
+          line-height: 100%;
+          color: #828282;
+          margin: 15px 25px 15px 25px;
+        }
+        .login-input-box {
+          padding: 0 25px;
+          text-align: left;
+          margin-top: 10px;
+          font-family: DBHeaventBold;
+          font-size: 14px;
+          line-height: 100%;
+          color: #333333;
+          .login-header {
+            display: flex;
+            justify-content: space-between;
+            white-space: nowrap;
+            .error-text {
+              font-family: DBHeavent;
+              font-size: 14px;
+              line-height: 100%;
+              color: #EB5757;
+            }
+          }
+          input[type=tel], input[type=text] {
+            width: 100%;
+            border: 0.5px solid #BDBDBD;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding: 8px 13px;
+            font-family: DBHeavent;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+          }
+          input[type=tel].error-input, input[type=text].error-input {
+            border: 0.5px solid #EB5757;
+          }
+          input[type=tel]::placeholder, input[type=text]::placeholder {
+            color: #BDBDBD;
+          }
+          p {
+            margin-top: 5px;
+            text-align: center;
+            font-family: DBHeavent;
+            font-size: 14px;
+            line-height: 100%;
+            color: #BDBDBD;
+          }
+        }
+        i {
+          color: #EB5757;
+          font-size: 60px;
+          margin-bottom: 16px;
+        }
+        .btn-primary {
+          border: none;
+          padding: 12px 0 14px 0;
+          width: 80%;
+          margin: 12px 0;
+          background: linear-gradient(258.14deg, #B8D522 9.38%, #CEE267 90.23%);
+          border-radius: 40px;
+          font-family: DBHeaventMed;
+          font-weight: 500;
+          font-size: 23px;
+          line-height: 100%;
+          text-align: center;
+          color: #333333;
+        }
+        input[type=button]:disabled {
+          opacity: 0.5;
+        }
+        .btn-outline {
+          border: 2px solid #B1C94F;
+          padding: 12px 0 14px 0;
+          width: 80%;
+          margin: 5px 0;
+          background: #FFFFFF;
+          box-shadow: 4px 4px 15px rgba(83, 90, 43, 0.15);
+          border-radius: 40px;
+          font-family: DBHeaventMed;
+          font-weight: 500;
+          font-size: 23px;
+          line-height: 100%;
+          text-align: center;
+          color: #B1C94F;
+        }
+        p {
+          font-family: DBHeavent;
+          font-size: 20px;
+          line-height: 24px;
+          color: #333333;
+          span {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
