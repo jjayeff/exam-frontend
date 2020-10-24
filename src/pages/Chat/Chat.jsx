@@ -6,9 +6,9 @@ class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      step: 'chatRoom',
-      name: 'Jeff',
-      roomName: 'room1',
+      step: 'sender',
+      name: '',
+      roomName: '',
     };
   }
 
