@@ -6,11 +6,28 @@
     margin-top: 40px;
     font-size: 37px;
     color: #383838;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
   }
   .sender-content {
     margin-top: 20px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
   }
   .sender-footer {
     margin-top: 40px;
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }

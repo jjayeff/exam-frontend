@@ -33,9 +33,11 @@ class Sender extends React.Component {
             onChange={({ target }) => this.handleOnChange(target)}
           />
         </div>
-        <div className="sender-footer">
-          <Button onClick={this.onSubmitSenderName}>ยืนยัน</Button>
-        </div>
+        {name !== '' ? (
+          <div className="sender-footer">
+            <Button onClick={this.onSubmitSenderName}>ยืนยัน</Button>
+          </div>
+        ) : null}
       </section>
     );
   }

@@ -2,6 +2,7 @@
 
 .input-components {
   input[type='text'] {
+    font-family: $font-family-prompt;
     height: 60px;
     color: #4e4e4e;
     border: 3px solid lightgray;

@@ -21,7 +21,7 @@ class InputText extends React.Component {
 }
 
 InputText.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };

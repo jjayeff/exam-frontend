@@ -29,4 +29,18 @@
       }
     }
   }
+  &:hover {
+    animation-name: bigger !important;
+    animation-duration: 0.5s !important;
+    animation-fill-mode: forwards !important;
+  }
+}
+
+@keyframes bigger {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }

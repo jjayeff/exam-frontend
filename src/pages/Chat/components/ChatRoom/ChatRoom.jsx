@@ -110,7 +110,9 @@ const ChatRoom = (props) => {
   return (
     <section className="chat-room container">
       <div className="chat-room-header">ห้อง {roomName}</div>
-      <div className="chat-room-content">{renderConntent()}</div>
+      <div className="chat-room-content">
+        <div className="chat-history">{renderConntent()}</div>
+      </div>
       <div className="chat-room-footer">
         <div className="chat-bar">
           <div className="enter-text-box">Enter เพื่อส่ง</div>
