@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useQuery, useMutation, useSubscription, gql } from '@apollo/client';
-import { InputText } from '../../../../components';
 import './ChatRoom.scss';
 
 const QUERY_MESSAGES = gql`
@@ -36,6 +35,7 @@ const SUBSCRIPTION_NEW_MESSAGE = gql`
       from {
         name
       }
+      roomName
     }
   }
 `;
@@ -58,14 +58,16 @@ const ChatRoom = (props) => {
   });
 
   useEffect(() => {
-    if (!result.loading && result.data) {
-      setMessages(result.data.messages);
+    const { loading, data } = result;
+    if (!loading && data) {
+      setMessages(data.messages);
     }
   }, [result.loading, result.data]);
 
   useEffect(() => {
-    if (!subscription.loading && subscription.data) {
-      setMessages([...messages, subscription.data.newMessage]);
+    const { loading, data } = subscription;
+    if (!loading && data && data.newMessage.roomName === roomName) {
+      setMessages([...messages, data.newMessage]);
     }
   }, [subscription.loading, subscription.data]);
 
