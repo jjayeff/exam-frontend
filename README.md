@@ -1,5 +1,16 @@
 # Proxumer - Frontend Developer Interview Question
 
+## Quick Start
+
+```bash
+1. git clone
+git clone https://github.com/jjayeff/exam-frontend.git 
+
+2. yarn or npm install
+
+5. yarn start or npm start
+```
+
 Objective: A web-based, GraphQL-powered chat client
 
 ## Demo video
