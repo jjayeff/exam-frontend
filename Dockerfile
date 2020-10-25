@@ -6,7 +6,14 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json /usr/src/app/package.json
+RUN rm -Rf node_modules
 RUN npm install --silent
 RUN npm install react-scripts@1.1.1 -g --silent
+
+COPY . /usr/src/app
+
+RUN npm run build --production
+
+EXPOSE 3000
 
 CMD ["npm", "start"]
