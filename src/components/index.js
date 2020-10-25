@@ -1,5 +1,6 @@
 // layouts
-import Loading from './Layout/Loading/Loading';
+import Loading from './Layout/Loading/Loading.jsx';
+import Error from './Layout/Error/Error.jsx';
 import Button from './Layout/Button/Button';
 import InputText from './Layout/InputText/InputText';
 
@@ -8,4 +9,5 @@ export {
   Loading,
   Button,
   InputText,
+  Error,
 };

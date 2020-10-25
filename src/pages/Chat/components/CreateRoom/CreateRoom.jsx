@@ -45,8 +45,6 @@ const CreateRoom = (props) => {
     }
   }, [rooms]);
 
-  const handleOnChange = ({ name, value }) => setRoomName(value);
-
   const onSubmitRoomName = () => {
     onChangeStateParent({ name: 'roomName', value: roomName });
     onChangeStateParent({ name: 'step', value: 'chatRoom' });
@@ -56,6 +54,12 @@ const CreateRoom = (props) => {
     onChangeStateParent({ name: 'step', value: 'room' });
   };
 
+  const beforeGetRoom = () => {
+    if (roomName !== '' && roomName !== 'rooms') {
+      getRoom({ variables: { roomName } });
+    }
+  };
+
   return (
     <section className="create-room container">
       <div className="create-room-header">{header}</div>
@@ -63,20 +67,14 @@ const CreateRoom = (props) => {
         <InputText
           name="roomName"
           value={roomName}
-          onChange={({ target }) => handleOnChange(target)}
+          onChange={({ target }) => setRoomName(target.value)}
         />
       </div>
       <div className="create-room-footer">
         <Button onClick={onClickCancel} type="text">
           กลับ
         </Button>
-        <Button
-          onClick={() =>
-            roomName !== '' ? getRoom({ variables: { roomName } }) : null
-          }
-        >
-          ยืนยัน
-        </Button>
+        <Button onClick={() => beforeGetRoom()}>ยืนยัน</Button>
       </div>
     </section>
   );

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useQuery, useMutation, useSubscription, gql } from '@apollo/client';
+import { Loading, Error } from '../../../../components';
 import './ChatRoom.scss';
 
 const QUERY_MESSAGES = gql`
@@ -102,9 +104,9 @@ const ChatRoom = (props) => {
   };
 
   const renderConntent = () => {
-    if (result.loading) return <h1>Loading...</h1>;
+    if (result.loading) return <Loading />;
 
-    if (result.error) return <h1>Error...</h1>;
+    if (result.error) return <Error />;
 
     return renderMessages();
   };
@@ -131,6 +133,11 @@ const ChatRoom = (props) => {
       </div>
     </section>
   );
+};
+
+ChatRoom.propTypes = {
+  name: PropTypes.string.isRequired,
+  roomName: PropTypes.string.isRequired,
 };
 
 export default ChatRoom;
