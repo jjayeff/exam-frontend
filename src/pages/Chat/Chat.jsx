@@ -25,6 +25,7 @@ class Chat extends React.Component {
         return (
           <CreateRoom
             header="สร้างห้องใหม่"
+            step={step}
             onChangeStateParent={this.handleOnChange}
           />
         );
@@ -32,6 +33,7 @@ class Chat extends React.Component {
         return (
           <CreateRoom
             header="เข้าร่วมแชท"
+            step={step}
             onChangeStateParent={this.handleOnChange}
           />
         );
