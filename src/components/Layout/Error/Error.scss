@@ -1,0 +1,12 @@
+@import '../../../common/commonConstant.scss';
+
+.Error {
+  text-align: center;
+  > .img {
+    width: 200px;
+    opacity: 0.8;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+  }
+}

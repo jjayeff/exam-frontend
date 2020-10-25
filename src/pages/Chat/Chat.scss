@@ -1,0 +1,12 @@
+@import '../../common/commonConstant.scss';
+
+.chat {
+  background-image: url('../../assets/images/logo.png'),
+    url('../../assets/images/bg.jpg');
+  background-repeat: no-repeat, repeat;
+  background-position: center top, left top;
+  background-size: auto 40px, auto;
+  background-position-y: 30px, 0;
+  min-height: 100vh;
+  padding: 40px 0;
+}

@@ -1,6 +1,7 @@
-version: "3.5"
+version: '3.5'
 services:
   chat-px-app:
+    container_name: chat-px-app
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,6 +9,9 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     ports:
-      - 3000:3000
+      - 80:3000
     environment:
-      - NODE_ENV=${NODE_ENV}
+      - NODE_ENV=production
+      - REACT_APP_BACKEND_API=http://localhost:4000/graphql
+      - REACT_APP_SOCKET_API=ws://localhost:4000/graphql
+    restart: unless-stopped
